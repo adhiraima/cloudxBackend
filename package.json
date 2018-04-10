@@ -1,0 +1,24 @@
+{
+  "name": "cloudxbackend",
+  "version": "1.0.0",
+  "description": "backend for cloudx services",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adhiraima/cloudxBackend.git"
+  },
+  "author": "adhir.aima@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adhiraima/cloudxBackend/issues"
+  },
+  "homepage": "https://github.com/adhiraima/cloudxBackend#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {}
+}
