@@ -91,12 +91,16 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__map_info_map_info_component__ = __webpack_require__("../../../../../src/app/map-info/map-info.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface_stats_interface_stats_component__ = __webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__traffic_traffic_component__ = __webpack_require__("../../../../../src/app/traffic/traffic.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__traffic_general_traffic_general_component__ = __webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_shared_service__ = __webpack_require__("../../../../../src/app/services/shared.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -124,7 +128,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_9__main_body_main_body_component__["a" /* MainBodyComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__map_info_map_info_component__["a" /* MapInfoComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__interface_stats_interface_stats_component__["a" /* InterfaceStatsComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__traffic_traffic_component__["a" /* TrafficComponent */]
+                __WEBPACK_IMPORTED_MODULE_12__traffic_traffic_component__["a" /* TrafficComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__traffic_general_traffic_general_component__["a" /* TrafficGeneralComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -133,7 +138,7 @@ var AppModule = (function () {
                     apiKey: 'AIzaSyDQjzCwLrrJYU9Tk7W7MnqcmZYIrCVeHqs'
                 })
             ],
-            providers: [],
+            providers: [__WEBPACK_IMPORTED_MODULE_14__services_shared_service__["a" /* SharedService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -274,7 +279,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "app-interface-stats {\n    border: 1px solid red;\n    width: 45%;\n    height: 45%;\n}", ""]);
+exports.push([module.i, "app-interface-stats {\n    \n    width: 100%;\n    height: 45%;\n}\n\nth {\n    background-color: lightgray;\n}", ""]);
 
 // exports
 
@@ -287,7 +292,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/interface-stats/interface-stats.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th>IP Address</th>\n          <th>Location</th>\n          <th>Alerts</th>\n          <th>Names</th>\n          <th>Seen Since</th>\n          <th>Breakdown</th>\n          <th>Traffic</th>\n        </tr>\n      </thead>\n      <tbody>\n        \n      </tbody>\n    </table>\n</div>"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><legend>Interface Stats</legend></div>\n  <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th rowspan=\"2\">WLAN</th>\n          <th rowspan=\"2\">Location</th>\n          <th>Alerts</th>\n          <th>Names</th>\n          <th>Seen Since</th>\n          <th>Breakdown</th>\n          <th>Traffic</th>\n        </tr>\n      </thead>\n      <tbody>\n        \n      </tbody>\n    </table>\n</div>"
 
 /***/ }),
 
@@ -405,7 +410,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "agm-map {\n    height: 600px;\n    width: 700px;\n}\n\n* {\n    font-family: Lato;\n}\n\na {\n    color: darkblue;\n}", ""]);
 
 // exports
 
@@ -418,7 +423,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/map-info/map-info.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"height: 500px; width: 600px;\">\n  <agm-map \n    [latitude]=\"lat\" \n    [longitude]=\"lng\" \n    [disableDefaultUI]=\"false\"\n    [zoomControl]=\"false\">\n      <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\n  </agm-map>\n</div>\n"
+module.exports = "<agm-map \n  [latitude]=\"lat\"\n  [longitude]=\"lng\"\n  [zoom]=\"zoom\"\n  [disableDefaultUI]=\"false\"\n  [zoomControl]=\"false\"\n  (mapClick)=\"mapClicked($event)\">\n\n  <agm-marker \n      *ngFor=\"let m of markers; let i = index\"\n      (markerClick)=\"clickedMarker(m.label, i)\"\n      [latitude]=\"m.lat\"\n      [longitude]=\"m.lng\"\n      [label]=\"m.label\"\n      [markerDraggable]=\"m.draggable\"\n      (dragEnd)=\"markerDragEnd(m, $event)\">\n      \n    <agm-info-window>\n      <strong>InfoWindow content</strong>\n    </agm-info-window>\n    \n  </agm-marker>\n  \n  <agm-circle [latitude]=\"lat + 0.3\" [longitude]=\"lng\" \n      [radius]=\"5000\"\n      [fillColor]=\"'red'\"\n      [circleDraggable]=\"true\"\n      [editable]=\"true\">\n  </agm-circle>\n\n</agm-map>"
 
 /***/ }),
 
@@ -427,6 +432,83 @@ module.exports = "<div style=\"height: 500px; width: 600px;\">\n  <agm-map \n   
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapInfoComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_shared_service__ = __webpack_require__("../../../../../src/app/services/shared.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MapInfoComponent = (function () {
+    function MapInfoComponent(sharedService) {
+        this.sharedService = sharedService;
+        this.zoom = 3;
+        this.markers = [
+            {
+                lat: 51.673858,
+                lng: 7.815982,
+                label: 'A',
+                draggable: true
+            },
+            {
+                lat: 51.373858,
+                lng: 7.215982,
+                label: 'B',
+                draggable: false
+            },
+            {
+                lat: 51.723858,
+                lng: 7.895982,
+                label: 'C',
+                draggable: true
+            }
+        ];
+        this.lat = sharedService.getCurrentLatitude();
+        this.lng = sharedService.getCurrentLongitude();
+        console.log(this.lat + ' and ' + this.lng);
+    }
+    MapInfoComponent.prototype.ngOnInit = function () {
+        console.log('loading map!!!' + this.lat + ' and ' + this.lng);
+    };
+    MapInfoComponent.prototype.clickedMarker = function (label, index) {
+        console.log("clicked the marker: " + (label || index));
+    };
+    MapInfoComponent.prototype.mapClicked = function ($event) {
+        this.markers.push({
+            lat: $event.coords.lat,
+            lng: $event.coords.lng,
+            draggable: true
+        });
+    };
+    MapInfoComponent.prototype.markerDragEnd = function (m, $event) {
+        console.log('dragEnd', m, $event);
+    };
+    MapInfoComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'app-map-info',
+            template: __webpack_require__("../../../../../src/app/map-info/map-info.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/map-info/map-info.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_shared_service__["a" /* SharedService */]])
+    ], MapInfoComponent);
+    return MapInfoComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/shared.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -438,22 +520,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var MapInfoComponent = (function () {
-    function MapInfoComponent() {
-        this.lat = 51.678418;
-        this.lng = 7.809007;
+var SharedService = (function () {
+    function SharedService() {
+        if ("geolocation" in navigator && navigator.geolocation) {
+            console.log('Geolocation is available');
+        }
+        else {
+            console.log('ggeolocation is not available');
+        }
     }
-    MapInfoComponent.prototype.ngOnInit = function () {
+    SharedService.prototype.getCurrentLatitude = function () {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            console.log(">>>>>>>" + JSON.stringify(Object.keys(position)));
+            return position.coords.latitude;
+        }, function (error) {
+            console.log("Error>>> " + error.message);
+        });
     };
-    MapInfoComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'app-map-info',
-            template: __webpack_require__("../../../../../src/app/map-info/map-info.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/map-info/map-info.component.css")]
-        }),
+    SharedService.prototype.getCurrentLongitude = function () {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            return position.coords.longitude;
+        });
+    };
+    SharedService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* Injectable */])(),
         __metadata("design:paramtypes", [])
-    ], MapInfoComponent);
-    return MapInfoComponent;
+    ], SharedService);
+    return SharedService;
 }());
 
 
@@ -582,6 +675,67 @@ var SignUpComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/traffic-general/traffic-general.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "th {\n    background-color: lightgray;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/traffic-general/traffic-general.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><legend>Traffic (General)</legend></div>\n  <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th>IP Address</th>\n          <th>Location</th>\n          <th>Alerts</th>\n          <th>Names</th>\n          <th>Seen Since</th>\n          <th>Breakdown</th>\n          <th>Traffic</th>\n        </tr>\n      </thead>\n      <tbody>\n        \n      </tbody>\n    </table>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/traffic-general/traffic-general.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrafficGeneralComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TrafficGeneralComponent = (function () {
+    function TrafficGeneralComponent() {
+    }
+    TrafficGeneralComponent.prototype.ngOnInit = function () {
+    };
+    TrafficGeneralComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'app-traffic-general',
+            template: __webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TrafficGeneralComponent);
+    return TrafficGeneralComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/traffic/traffic.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -590,7 +744,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "app-traffic {\n    border: 1px solid blue;\n}", ""]);
+exports.push([module.i, ".fromHeader {\n    background-color: bisque;\n}\n\n.toHeader {\n    background-color: burlywood;\n}", ""]);
 
 // exports
 
@@ -603,7 +757,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/traffic/traffic.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p style=\"border: 1px solid black;\">\n  traffic works!\n</p>\n"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\">\n    <legend>Traffic By Country</legend>\n    <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th colspan=\"2\" class=\"fromHeader\">From</th>\n          <th colspan=\"4\" class=\"toHeader\">To</th>\n        </tr>\n        <tr>\n          <th class=\"fromHeader\">Device Type</th>\n          <th class=\"fromHeader\">Source IP</th>\n          <th class=\"toHeader\">Destination IP</th>\n          <th class=\"toHeader\">DNS Name</th>\n          <th class=\"toHeader\">Country</th>\n          <th class=\"toHeader\">ASN</th>\n        </tr>\n      </thead>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 

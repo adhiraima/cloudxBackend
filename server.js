@@ -1,5 +1,12 @@
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+var privateKey  = fs.readFileSync('certs/cloudx.key', 'utf8');
+var certificate = fs.readFileSync('certs/cloudx.crt', 'utf8');
 var express = require('express');
-var path = require('path');
+
+var credentials = {key: privateKey, cert: certificate};
+
 var app = express();
 
 app.set('port', process.env.PORT || 3300);
@@ -29,7 +36,8 @@ app.use(function(err, req, res, next){
  res.send('500 - Server Error');
 });
 
-app.listen(app.get('port'), function(){
- console.log( 'Express started on http://localhost:' +
- app.get('port') + '; press Ctrl-C to terminate.' );
+var httpsServer = https.createServer(credentials, app);
+
+httpsServer.listen(3300, function(){
+    console.log("server running at https://IP_ADDRESS:3300/ psess Ctrl - C to exit!")
 });

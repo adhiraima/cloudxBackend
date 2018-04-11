@@ -13,6 +13,8 @@ import { MainBodyComponent } from './main-body/main-body.component';
 import { MapInfoComponent } from './map-info/map-info.component';
 import { InterfaceStatsComponent } from './interface-stats/interface-stats.component';
 import { TrafficComponent } from './traffic/traffic.component';
+import { TrafficGeneralComponent } from './traffic-general/traffic-general.component';
+import { SharedService } from './services/shared.service'
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { TrafficComponent } from './traffic/traffic.component';
     MainBodyComponent,
     MapInfoComponent,
     InterfaceStatsComponent,
-    TrafficComponent
+    TrafficComponent,
+    TrafficGeneralComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ import { TrafficComponent } from './traffic/traffic.component';
       apiKey: 'AIzaSyDQjzCwLrrJYU9Tk7W7MnqcmZYIrCVeHqs'
     })
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

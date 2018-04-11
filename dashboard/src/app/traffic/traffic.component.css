@@ -1,3 +1,7 @@
-app-traffic {
-    border: 1px solid blue;
+.fromHeader {
+    background-color: bisque;
+}
+
+.toHeader {
+    background-color: burlywood;
 }
