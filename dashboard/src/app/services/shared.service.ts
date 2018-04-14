@@ -2,29 +2,35 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class SharedService {
+  latitude: number;
+  longitude: number;
 
   constructor() {
     if ("geolocation" in navigator && navigator.geolocation) {
       console.log('Geolocation is available');
+      navigator.geolocation.getCurrentPosition(this.getCoor, this.errorCoor, 
+        {maximumAge:60000, timeout:5000, enableHighAccuracy:true});
     } else {
-      console.log('ggeolocation is not available')
+      console.log('geolocation is not available')
     }
    }
 
-  getCurrentLatitude(): any {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      console.log(">>>>>>>"+JSON.stringify(Object.keys(position)));
-      return position.coords.latitude;
-    }, 
-    function(error) {
-      console.log("Error>>> " + error.message);
-    });
+   getCoor(position) {
+      this.latitude = position.coords.latitude;
+      this.longitude = position.coords.longitude;
+   }
+
+   errorCoor() {
+    this.latitude = 0;
+    this.longitude = 0;
+   }
+
+  getCurrentLatitude(): number {
+    return this.latitude;
+    
   }
 
-  getCurrentLongitude(): any {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      return position.coords.longitude;
-    });
+  getCurrentLongitude(): number {
+    return this.longitude;
   }
-
 }

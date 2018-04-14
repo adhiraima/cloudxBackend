@@ -82,17 +82,20 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__header_header_component__ = __webpack_require__("../../../../../src/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__sign_in_sign_in_component__ = __webpack_require__("../../../../../src/app/sign-in/sign-in.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sign_up_sign_up_component__ = __webpack_require__("../../../../../src/app/sign-up/sign-up.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__main_body_main_body_component__ = __webpack_require__("../../../../../src/app/main-body/main-body.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__map_info_map_info_component__ = __webpack_require__("../../../../../src/app/map-info/map-info.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface_stats_interface_stats_component__ = __webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__traffic_traffic_component__ = __webpack_require__("../../../../../src/app/traffic/traffic.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__traffic_general_traffic_general_component__ = __webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_shared_service__ = __webpack_require__("../../../../../src/app/services/shared.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__header_header_component__ = __webpack_require__("../../../../../src/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sign_in_sign_in_component__ = __webpack_require__("../../../../../src/app/sign-in/sign-in.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__sign_up_sign_up_component__ = __webpack_require__("../../../../../src/app/sign-up/sign-up.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__main_body_main_body_component__ = __webpack_require__("../../../../../src/app/main-body/main-body.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__map_info_map_info_component__ = __webpack_require__("../../../../../src/app/map-info/map-info.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__interface_stats_interface_stats_component__ = __webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__traffic_traffic_component__ = __webpack_require__("../../../../../src/app/traffic/traffic.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__traffic_general_traffic_general_component__ = __webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_shared_service__ = __webpack_require__("../../../../../src/app/services/shared.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_traffic_service__ = __webpack_require__("../../../../../src/app/services/traffic.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_interface_service__ = __webpack_require__("../../../../../src/app/services/interface.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -114,32 +117,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["F" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__sign_in_sign_in_component__["a" /* SignInComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__sign_up_sign_up_component__["a" /* SignUpComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__main_body_main_body_component__["a" /* MainBodyComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__map_info_map_info_component__["a" /* MapInfoComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__interface_stats_interface_stats_component__["a" /* InterfaceStatsComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__traffic_traffic_component__["a" /* TrafficComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__traffic_general_traffic_general_component__["a" /* TrafficGeneralComponent */]
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__sign_in_sign_in_component__["a" /* SignInComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__sign_up_sign_up_component__["a" /* SignUpComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__main_body_main_body_component__["a" /* MainBodyComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__map_info_map_info_component__["a" /* MapInfoComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__interface_stats_interface_stats_component__["a" /* InterfaceStatsComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__traffic_traffic_component__["a" /* TrafficComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__traffic_general_traffic_general_component__["a" /* TrafficGeneralComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_3__agm_core__["a" /* AgmCoreModule */].forRoot({
                     apiKey: 'AIzaSyDQjzCwLrrJYU9Tk7W7MnqcmZYIrCVeHqs'
                 })
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_14__services_shared_service__["a" /* SharedService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_15__services_shared_service__["a" /* SharedService */],
+                __WEBPACK_IMPORTED_MODULE_16__services_traffic_service__["a" /* TrafficService */],
+                __WEBPACK_IMPORTED_MODULE_17__services_interface_service__["a" /* InterfaceService */]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -279,7 +290,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "app-interface-stats {\n    \n    width: 100%;\n    height: 45%;\n}\n\nth {\n    background-color: lightgray;\n}", ""]);
+exports.push([module.i, "app-interface-stats {\n    \n    width: 100%;\n    height: 45%;\n    font-size: 0.8em;\n}\n\nth {\n    background-color: lightgray;\n}", ""]);
 
 // exports
 
@@ -292,7 +303,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/interface-stats/interface-stats.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><legend>Interface Stats</legend></div>\n  <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th rowspan=\"2\">WLAN</th>\n          <th rowspan=\"2\">Location</th>\n          <th>Alerts</th>\n          <th>Names</th>\n          <th>Seen Since</th>\n          <th>Breakdown</th>\n          <th>Traffic</th>\n        </tr>\n      </thead>\n      <tbody>\n        \n      </tbody>\n    </table>\n</div>"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><strong>Interface Stats</strong></div>\n  <table class=\"table table-striped\">\n      <thead>\n      </thead>\n      <tbody>\n        <tr>\n          <th rowspan=\"2\">WLAN</th>\n          <th scope=\"row\">Upload</th><td><label>Upload Graph</label></td>\n        </tr>\n        <tr>\n          <th scope=\"row\">Download</th><td><label>Download Graph</label></td>\n        </tr>\n        <tr>\n          <th rowspan=\"2\">Ethernet</th>\n            <th scope=\"row\">Upload</th><td><label>Upload Graph</label></td>\n          </tr>\n          <tr>\n            <th scope=\"row\">Download</th><td><label>Download Graph</label></td>\n        </tr>\n      </tbody>\n    </table>\n</div>"
 
 /***/ }),
 
@@ -302,6 +313,7 @@ module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InterfaceStatsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_interface_service__ = __webpack_require__("../../../../../src/app/services/interface.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -312,10 +324,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var InterfaceStatsComponent = (function () {
-    function InterfaceStatsComponent() {
+    function InterfaceStatsComponent(interfaceService) {
+        this.interfaceService = interfaceService;
     }
+    InterfaceStatsComponent.prototype.ngOnDestroy = function () {
+        clearTimeout(this.timeOut);
+    };
     InterfaceStatsComponent.prototype.ngOnInit = function () {
+        this.getUpDownData();
+    };
+    InterfaceStatsComponent.prototype.getUpDownData = function () {
+        var _this = this;
+        this.interfaceService.getUpload().subscribe(function (res) {
+            _this.wlanUpload = res;
+        });
+        this.interfaceService.getUpload().subscribe(function (res) {
+            _this.ethUpload = res;
+        });
+        this.interfaceService.getDownload().subscribe(function (res) {
+            _this.wlanDownload = res;
+        });
+        this.interfaceService.getDownload().subscribe(function (res) {
+            _this.ethDownload = res;
+        });
+        setTimeout(function () {
+            _this.getUpDownData();
+        }, 5000);
     };
     InterfaceStatsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -323,7 +359,7 @@ var InterfaceStatsComponent = (function () {
             template: __webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.html"),
             styles: [__webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_interface_service__["a" /* InterfaceService */]])
     ], InterfaceStatsComponent);
     return InterfaceStatsComponent;
 }());
@@ -340,7 +376,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "* {\n    font-family: Lato;\n    font-size: 11px;\n}\n\n", ""]);
 
 // exports
 
@@ -353,7 +389,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/main-body/main-body.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"d-flex flex-row align-items-stretch\">\n  <div class=\"p-2\">\n      <app-map-info></app-map-info>\n  </div>\n  <div class=\"p-2\">\n    <div class=\"d-flex flex-column align-items-stretch\">\n      <div class=\"p-2\"><app-interface-stats></app-interface-stats></div>\n      <div class=\"p-2\"><app-traffic></app-traffic></div>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"d-flex flex-row align-items-stretch\">\n  <div class=\"p-2\">\n      <app-map-info></app-map-info>\n  </div>\n  <div class=\"p-2 tables-sec\" style=\"width: 50%;\">\n    <div class=\"d-flex flex-column align-items-stretch\">\n      <div class=\"p-2\"><app-interface-stats></app-interface-stats></div>\n      <div class=\"p-2\"><app-traffic></app-traffic></div>\n      <div class=\"p-2\"><app-traffic-general></app-traffic-general></div>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -410,7 +446,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "agm-map {\n    height: 600px;\n    width: 700px;\n}\n\n* {\n    font-family: Lato;\n}\n\na {\n    color: darkblue;\n}", ""]);
+exports.push([module.i, "agm-map {\n    height: 600px;\n    width: 650px;\n}\n\n* {\n    font-family: Lato;\n    font-size: 0.2 em;\n}\n\n", ""]);
 
 // exports
 
@@ -504,6 +540,50 @@ var MapInfoComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/services/interface.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InterfaceService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var InterfaceService = (function () {
+    function InterfaceService(http) {
+        this.http = http;
+        console.log(window.location.origin + " >>>>>>>> ");
+    }
+    InterfaceService.prototype.getUpload = function () {
+        return this.http.get(window.location.origin + '/uploads').map(function (res) {
+            return res.json();
+        });
+    };
+    InterfaceService.prototype.getDownload = function () {
+        return this.http.get(window.location.origin + '/downloads').map(function (res) {
+            return res.json();
+        });
+    };
+    InterfaceService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
+    ], InterfaceService);
+    return InterfaceService;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/services/shared.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -524,29 +604,61 @@ var SharedService = (function () {
     function SharedService() {
         if ("geolocation" in navigator && navigator.geolocation) {
             console.log('Geolocation is available');
+            navigator.geolocation.getCurrentPosition(this.getCoor, this.errorCoor, { maximumAge: 60000, timeout: 5000, enableHighAccuracy: true });
         }
         else {
-            console.log('ggeolocation is not available');
+            console.log('geolocation is not available');
         }
     }
+    SharedService.prototype.getCoor = function (position) {
+        this.latitude = position.coords.latitude;
+        this.longitude = position.coords.longitude;
+    };
+    SharedService.prototype.errorCoor = function () {
+        this.latitude = 0;
+        this.longitude = 0;
+    };
     SharedService.prototype.getCurrentLatitude = function () {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            console.log(">>>>>>>" + JSON.stringify(Object.keys(position)));
-            return position.coords.latitude;
-        }, function (error) {
-            console.log("Error>>> " + error.message);
-        });
+        return this.latitude;
     };
     SharedService.prototype.getCurrentLongitude = function () {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            return position.coords.longitude;
-        });
+        return this.longitude;
     };
     SharedService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* Injectable */])(),
         __metadata("design:paramtypes", [])
     ], SharedService);
     return SharedService;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/traffic.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrafficService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TrafficService = (function () {
+    function TrafficService() {
+    }
+    TrafficService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], TrafficService);
+    return TrafficService;
 }());
 
 
@@ -683,7 +795,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "th {\n    background-color: lightgray;\n}", ""]);
+exports.push([module.i, "th {\n    background-color: lightgray;\n    height: 30%;\n}\n\ntd {\n    height: 30%;\n}\n", ""]);
 
 // exports
 
@@ -696,7 +808,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/traffic-general/traffic-general.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><legend>Traffic (General)</legend></div>\n  <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th>IP Address</th>\n          <th>Location</th>\n          <th>Alerts</th>\n          <th>Names</th>\n          <th>Seen Since</th>\n          <th>Breakdown</th>\n          <th>Traffic</th>\n        </tr>\n      </thead>\n      <tbody>\n        \n      </tbody>\n    </table>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><strong>Traffic (General)</strong></div>\n  <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th rowspan=\"2\">WLAN</th>\n          <th rowspan=\"2\">Location</th>\n          <th>Alerts</th>\n          <th>Names</th>\n          <th>Seen Since</th>\n          <th>Breakdown</th>\n          <th>Traffic</th>\n        </tr>\n      </thead>\n      <tbody>\n        \n      </tbody>\n    </table>\n</div>\n"
 
 /***/ }),
 
@@ -744,7 +856,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".fromHeader {\n    background-color: bisque;\n}\n\n.toHeader {\n    background-color: burlywood;\n}", ""]);
+exports.push([module.i, ".fromHeader {\n    background-color: bisque;\n}\n\n.toHeader {\n    background-color: burlywood;\n}\n\ntd {\n    height: 30%;\n}\n\nth {\n    height: 30%;\n}\n\n", ""]);
 
 // exports
 
@@ -757,7 +869,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/traffic/traffic.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\">\n    <legend>Traffic By Country</legend>\n    <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th colspan=\"2\" class=\"fromHeader\">From</th>\n          <th colspan=\"4\" class=\"toHeader\">To</th>\n        </tr>\n        <tr>\n          <th class=\"fromHeader\">Device Type</th>\n          <th class=\"fromHeader\">Source IP</th>\n          <th class=\"toHeader\">Destination IP</th>\n          <th class=\"toHeader\">DNS Name</th>\n          <th class=\"toHeader\">Country</th>\n          <th class=\"toHeader\">ASN</th>\n        </tr>\n      </thead>\n    </table>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\">\n    <strong>Traffic By Country</strong>\n    <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th colspan=\"2\" class=\"fromHeader\">From</th>\n          <th colspan=\"4\" class=\"toHeader\">To</th>\n        </tr>\n        <tr>\n          <th class=\"fromHeader\">Device Type</th>\n          <th class=\"fromHeader\">Source IP</th>\n          <th class=\"toHeader\">Destination IP</th>\n          <th class=\"toHeader\">DNS Name</th>\n          <th class=\"toHeader\">Country</th>\n          <th class=\"toHeader\">ASN</th>\n        </tr>\n      </thead>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 

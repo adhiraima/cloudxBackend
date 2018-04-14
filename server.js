@@ -5,6 +5,8 @@ var privateKey  = fs.readFileSync('certs/cloudx.key', 'utf8');
 var certificate = fs.readFileSync('certs/cloudx.crt', 'utf8');
 var express = require('express');
 
+var interfaces = require('./upload-download/index.js');
+
 var credentials = {key: privateKey, cert: certificate};
 
 var app = express();
@@ -21,6 +23,16 @@ app.get('/', function(req, res){
 app.get('/hosts', function(req, res){
     res.type('text/html');
     res.sendFile('hosts.html');
+});
+
+app.get('/uploads', function(req, res) {
+    res.type('application/json');
+    res.send(JSON.stringify({'upload': interfaces.getUpload()}));
+});
+
+app.get('/downloads', function(req, res) {
+    res.type('application/json');
+    res.send(JSON.stringify({'download': interfaces.getDownload()}));
 });
 
 app.use(function(req, res){

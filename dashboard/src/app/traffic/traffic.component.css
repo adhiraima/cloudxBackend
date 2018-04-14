@@ -5,3 +5,12 @@
 .toHeader {
     background-color: burlywood;
 }
+
+td {
+    height: 30%;
+}
+
+th {
+    height: 30%;
+}
+

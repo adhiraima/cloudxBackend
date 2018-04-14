@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Chart } from 'chart.js';
+import { InterfaceService } from '../services/interface.service';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-interface-stats',
@@ -7,9 +10,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterfaceStatsComponent implements OnInit {
 
-  constructor() { }
+  public wlanUpload:number;
+  public wlanDownload: number;
+  public ethUpload: number;
+  public ethDownload: number;
+  private timeOut: any;
 
-  ngOnInit() {
+  constructor(private interfaceService: InterfaceService) { }
+
+  ngOnDestroy() {
+    clearTimeout(this.timeOut);
   }
 
+  ngOnInit() {
+    this.getUpDownData();
+  }
+
+  getUpDownData() {
+    this.interfaceService.getUpload().subscribe((res) => {
+      this.wlanUpload = res;
+    });
+    this.interfaceService.getUpload().subscribe((res) => {
+      this.ethUpload = res;
+    });
+    this.interfaceService.getDownload().subscribe((res) => {
+      this.wlanDownload = res;
+    });
+    this.interfaceService.getDownload().subscribe((res) => {
+      this.ethDownload = res;
+    });
+    setTimeout(() => {
+      this.getUpDownData();
+    }, 5000);
+  }
 }

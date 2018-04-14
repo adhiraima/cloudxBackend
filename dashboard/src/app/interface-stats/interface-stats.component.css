@@ -2,6 +2,7 @@ app-interface-stats {
     
     width: 100%;
     height: 45%;
+    font-size: 0.8em;
 }
 
 th {

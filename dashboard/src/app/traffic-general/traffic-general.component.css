@@ -1,3 +1,8 @@
 th {
     background-color: lightgray;
+    height: 30%;
+}
+
+td {
+    height: 30%;
 }
