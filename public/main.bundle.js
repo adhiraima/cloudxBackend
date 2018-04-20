@@ -60,7 +60,7 @@ var AppComponent = (function () {
         this.title = 'CloudX.One';
     }
     AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
             template: __webpack_require__("../../../../../src/app/app.component.html"),
             styles: [__webpack_require__("../../../../../src/app/app.component.css")]
@@ -83,19 +83,23 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__header_header_component__ = __webpack_require__("../../../../../src/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sign_in_sign_in_component__ = __webpack_require__("../../../../../src/app/sign-in/sign-in.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__sign_up_sign_up_component__ = __webpack_require__("../../../../../src/app/sign-up/sign-up.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__main_body_main_body_component__ = __webpack_require__("../../../../../src/app/main-body/main-body.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__map_info_map_info_component__ = __webpack_require__("../../../../../src/app/map-info/map-info.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__interface_stats_interface_stats_component__ = __webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__traffic_traffic_component__ = __webpack_require__("../../../../../src/app/traffic/traffic.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__traffic_general_traffic_general_component__ = __webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_shared_service__ = __webpack_require__("../../../../../src/app/services/shared.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_traffic_service__ = __webpack_require__("../../../../../src/app/services/traffic.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_interface_service__ = __webpack_require__("../../../../../src/app/services/interface.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_chartjs__ = __webpack_require__("../../../../angular2-chartjs/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_chartjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ng_bootstrap_ng_bootstrap_carousel_carousel_config__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/carousel/carousel-config.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__header_header_component__ = __webpack_require__("../../../../../src/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__sign_in_sign_in_component__ = __webpack_require__("../../../../../src/app/sign-in/sign-in.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__sign_up_sign_up_component__ = __webpack_require__("../../../../../src/app/sign-up/sign-up.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__main_body_main_body_component__ = __webpack_require__("../../../../../src/app/main-body/main-body.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__map_info_map_info_component__ = __webpack_require__("../../../../../src/app/map-info/map-info.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__interface_stats_interface_stats_component__ = __webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__traffic_traffic_component__ = __webpack_require__("../../../../../src/app/traffic/traffic.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__traffic_general_traffic_general_component__ = __webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_shared_service__ = __webpack_require__("../../../../../src/app/services/shared.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_traffic_service__ = __webpack_require__("../../../../../src/app/services/traffic.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_interface_service__ = __webpack_require__("../../../../../src/app/services/interface.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -120,37 +124,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["F" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__sign_in_sign_in_component__["a" /* SignInComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__sign_up_sign_up_component__["a" /* SignUpComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__main_body_main_body_component__["a" /* MainBodyComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__map_info_map_info_component__["a" /* MapInfoComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__interface_stats_interface_stats_component__["a" /* InterfaceStatsComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__traffic_traffic_component__["a" /* TrafficComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__traffic_general_traffic_general_component__["a" /* TrafficGeneralComponent */]
+                __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__sign_in_sign_in_component__["a" /* SignInComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__sign_up_sign_up_component__["a" /* SignUpComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__main_body_main_body_component__["a" /* MainBodyComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__map_info_map_info_component__["a" /* MapInfoComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__interface_stats_interface_stats_component__["a" /* InterfaceStatsComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__traffic_traffic_component__["a" /* TrafficComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__traffic_general_traffic_general_component__["a" /* TrafficGeneralComponent */]
             ],
             imports: [
+                __WEBPACK_IMPORTED_MODULE_5_angular2_chartjs__["ChartModule"],
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_3__agm_core__["a" /* AgmCoreModule */].forRoot({
                     apiKey: 'AIzaSyDQjzCwLrrJYU9Tk7W7MnqcmZYIrCVeHqs'
-                })
+                }),
+                __WEBPACK_IMPORTED_MODULE_6__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_15__services_shared_service__["a" /* SharedService */],
-                __WEBPACK_IMPORTED_MODULE_16__services_traffic_service__["a" /* TrafficService */],
-                __WEBPACK_IMPORTED_MODULE_17__services_interface_service__["a" /* InterfaceService */]
+                __WEBPACK_IMPORTED_MODULE_18__services_shared_service__["a" /* SharedService */],
+                __WEBPACK_IMPORTED_MODULE_19__services_traffic_service__["a" /* TrafficService */],
+                __WEBPACK_IMPORTED_MODULE_20__services_interface_service__["a" /* InterfaceService */],
+                __WEBPACK_IMPORTED_MODULE_7__ng_bootstrap_ng_bootstrap_carousel_carousel_config__["a" /* NgbCarouselConfig */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -207,7 +217,7 @@ var FooterComponent = (function () {
     FooterComponent.prototype.ngOnInit = function () {
     };
     FooterComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-footer',
             template: __webpack_require__("../../../../../src/app/footer/footer.component.html"),
             styles: [__webpack_require__("../../../../../src/app/footer/footer.component.css")]
@@ -268,7 +278,7 @@ var HeaderComponent = (function () {
     HeaderComponent.prototype.ngOnInit = function () {
     };
     HeaderComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-header',
             template: __webpack_require__("../../../../../src/app/header/header.component.html"),
             styles: [__webpack_require__("../../../../../src/app/header/header.component.css")]
@@ -290,7 +300,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "app-interface-stats {\n    \n    width: 100%;\n    height: 45%;\n    font-size: 0.8em;\n}\n\nth {\n    background-color: lightgray;\n}", ""]);
+exports.push([module.i, "app-interface-stats {\n    font-size: 0.8em;\n    width: 600px;\n}\n\nth {\n    background-color: lightgray;\n}\n\nchart {\n    height: 120px;\n    width: 600px;\n}", ""]);
 
 // exports
 
@@ -303,7 +313,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/interface-stats/interface-stats.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><strong>Interface Stats</strong></div>\n  <table class=\"table table-striped\">\n      <thead>\n      </thead>\n      <tbody>\n        <tr>\n          <th rowspan=\"2\">WLAN</th>\n          <th scope=\"row\">Upload</th><td><label>Upload Graph</label></td>\n        </tr>\n        <tr>\n          <th scope=\"row\">Download</th><td><label>Download Graph</label></td>\n        </tr>\n        <tr>\n          <th rowspan=\"2\">Ethernet</th>\n            <th scope=\"row\">Upload</th><td><label>Upload Graph</label></td>\n          </tr>\n          <tr>\n            <th scope=\"row\">Download</th><td><label>Download Graph</label></td>\n        </tr>\n      </tbody>\n    </table>\n</div>"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><strong>Interface Stats</strong></div>\n  <table class=\"table table-striped\">\n      <thead>\n      </thead>\n      <tbody>\n        <tr>\n          <th rowspan=\"2\">WLAN</th>\n          <th scope=\"row\">Upload</th>\n          <td>\n            <div class=\"chartHolder\">\n              <chart [type]=\"type\" [data]=\"dataWlUpload\" [options]=\"options\"></chart>\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <th scope=\"row\">Download</th>\n          <td>\n            <div class=\"chartHolder\">\n              <chart [type]=\"type\" [data]=\"dataWlDownload\" [options]=\"options\"></chart>\n            </div>\n          </td>\n        </tr>\n        <tr>\n          <th rowspan=\"2\">Ethernet</th>\n            <th scope=\"row\">Upload</th>\n            <td>\n              <div class=\"chartHolder\">\n                <chart [type]=\"type\" [data]=\"dataEthUpload\" [options]=\"options\"></chart>\n              </div>\n            </td>\n          </tr>\n          <tr>\n            <th scope=\"row\">Download</th>\n            <td>\n              <div class=\"chartHolder\">\n                <chart [type]=\"type\" [data]=\"dataEthDownload\" [options]=\"options\"></chart>\n              </div>\n            </td>\n        </tr>\n      </tbody>\n    </table>\n</div>"
 
 /***/ }),
 
@@ -328,33 +338,118 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var InterfaceStatsComponent = (function () {
     function InterfaceStatsComponent(interfaceService) {
         this.interfaceService = interfaceService;
+        this.wlanUpload = [];
+        this.wlanDownload = [];
+        this.ethUpload = [];
+        this.ethDownload = [];
+        this.wLanUpTime = [];
+        this.wLanDownTime = [];
+        this.ethUpTime = [];
+        this.ethDownTime = [];
+        this.type = 'line';
+        this.options = {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            min: 0,
+                            max: 100
+                        }
+                    }]
+            },
+            legend: {
+                display: false
+            }
+        };
+        console.log("constructor called");
+        this.timeOut = 2000;
     }
     InterfaceStatsComponent.prototype.ngOnDestroy = function () {
         clearTimeout(this.timeOut);
     };
     InterfaceStatsComponent.prototype.ngOnInit = function () {
+        console.log("init called");
+    };
+    InterfaceStatsComponent.prototype.ngAfterViewInit = function () {
+        console.log("Afterview Init");
         this.getUpDownData();
     };
     InterfaceStatsComponent.prototype.getUpDownData = function () {
         var _this = this;
+        var date = new Date();
+        var dateString = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
         this.interfaceService.getUpload().subscribe(function (res) {
-            _this.wlanUpload = res;
+            if (_this.wlanUpload.length == 10) {
+                _this.wlanUpload.shift();
+                _this.wLanUpTime.shift();
+            }
+            _this.wlanUpload.push(parseInt(res.text()));
+            _this.wLanUpTime.push(dateString);
+            _this.dataWlUpload = {
+                labels: _this.wLanUpTime,
+                datasets: [
+                    {
+                        data: _this.wlanUpload
+                    }
+                ]
+            };
         });
         this.interfaceService.getUpload().subscribe(function (res) {
-            _this.ethUpload = res;
+            if (_this.ethUpload.length == 10) {
+                _this.ethUpload.shift();
+                _this.ethUpTime.shift();
+            }
+            _this.ethUpload.push(parseInt(res.text()));
+            _this.ethUpTime.push(dateString);
+            _this.dataEthUpload = {
+                labels: _this.ethUpload,
+                datasets: [
+                    {
+                        data: _this.ethUpload
+                    }
+                ]
+            };
         });
         this.interfaceService.getDownload().subscribe(function (res) {
-            _this.wlanDownload = res;
+            if (_this.wlanDownload.length == 10) {
+                _this.wlanDownload.shift();
+                _this.wLanDownTime.shift();
+            }
+            _this.wlanDownload.push(parseInt(res.text()));
+            _this.wLanDownTime.push(dateString);
+            _this.dataWlDownload = {
+                labels: _this.wLanDownTime,
+                datasets: [
+                    {
+                        data: _this.wlanDownload
+                    }
+                ]
+            };
         });
         this.interfaceService.getDownload().subscribe(function (res) {
-            _this.ethDownload = res;
+            if (_this.ethDownload.length == 10) {
+                _this.ethDownload.shift();
+                _this.ethDownTime.shift();
+            }
+            _this.ethDownload.push(parseInt(res.text()));
+            _this.ethDownTime.push(dateString);
+            _this.dataEthDownload = {
+                labels: _this.ethDownTime,
+                datasets: [
+                    {
+                        data: _this.ethDownload
+                    }
+                ]
+            };
         });
         setTimeout(function () {
             _this.getUpDownData();
-        }, 5000);
+        }, this.timeOut);
     };
     InterfaceStatsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-interface-stats',
             template: __webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.html"),
             styles: [__webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.css")]
@@ -376,7 +471,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "* {\n    font-family: Lato;\n    font-size: 11px;\n}\n\n", ""]);
+exports.push([module.i, "* {\n    font-family: Lato;\n    font-size: 11px;\n}\n\n.carousel-control-next-icon {\n    color: black;\n}\n\n", ""]);
 
 // exports
 
@@ -389,7 +484,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/main-body/main-body.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"d-flex flex-row align-items-stretch\">\n  <div class=\"p-2\">\n      <app-map-info></app-map-info>\n  </div>\n  <div class=\"p-2 tables-sec\" style=\"width: 50%;\">\n    <div class=\"d-flex flex-column align-items-stretch\">\n      <div class=\"p-2\"><app-interface-stats></app-interface-stats></div>\n      <div class=\"p-2\"><app-traffic></app-traffic></div>\n      <div class=\"p-2\"><app-traffic-general></app-traffic-general></div>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"d-flex flex-row align-items-stretch\" style=\"height: 585px; padding-bottom: 5px;\">\n  <div class=\"p-2\">\n      <app-map-info></app-map-info>\n  </div>\n  <div class=\"p-2 tables-sec\" style=\"width: 60%;\">\n    <div class=\"d-flex flex-column align-items-stretch\">\n      <ngb-carousel style=\"width: 100%\">\n        <ng-template ngbSlide>\n            <div class=\"p-2\"><app-interface-stats></app-interface-stats></div>\n        </ng-template>\n        <ng-template ngbSlide>\n            <div class=\"p-2\"><app-traffic></app-traffic></div>\n        </ng-template>\n        <ng-template ngbSlide>\n            <div class=\"p-2\"><app-traffic-general></app-traffic-general></div>\n        </ng-template>\n      </ngb-carousel>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -424,7 +519,7 @@ var MainBodyComponent = (function () {
         // );
     };
     MainBodyComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-main-body',
             template: __webpack_require__("../../../../../src/app/main-body/main-body.component.html"),
             styles: [__webpack_require__("../../../../../src/app/main-body/main-body.component.css")]
@@ -446,7 +541,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "agm-map {\n    height: 600px;\n    width: 650px;\n}\n\n* {\n    font-family: Lato;\n    font-size: 0.2 em;\n}\n\n", ""]);
+exports.push([module.i, "agm-map {\n    height: 590px;\n    width: 650px;\n}\n\n* {\n    font-family: Lato;\n    font-size: 0.2 em;\n}\n\n", ""]);
 
 // exports
 
@@ -526,7 +621,7 @@ var MapInfoComponent = (function () {
         console.log('dragEnd', m, $event);
     };
     MapInfoComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-map-info',
             template: __webpack_require__("../../../../../src/app/map-info/map-info.component.html"),
             styles: [__webpack_require__("../../../../../src/app/map-info/map-info.component.css")]
@@ -564,17 +659,13 @@ var InterfaceService = (function () {
         console.log(window.location.origin + " >>>>>>>> ");
     }
     InterfaceService.prototype.getUpload = function () {
-        return this.http.get(window.location.origin + '/uploads').map(function (res) {
-            return res.json();
-        });
+        return this.http.get(window.location.origin + '/uploads');
     };
     InterfaceService.prototype.getDownload = function () {
-        return this.http.get(window.location.origin + '/downloads').map(function (res) {
-            return res.json();
-        });
+        return this.http.get(window.location.origin + '/downloads');
     };
     InterfaceService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
     ], InterfaceService);
     return InterfaceService;
@@ -625,7 +716,7 @@ var SharedService = (function () {
         return this.longitude;
     };
     SharedService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
         __metadata("design:paramtypes", [])
     ], SharedService);
     return SharedService;
@@ -655,7 +746,7 @@ var TrafficService = (function () {
     function TrafficService() {
     }
     TrafficService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
         __metadata("design:paramtypes", [])
     ], TrafficService);
     return TrafficService;
@@ -712,7 +803,7 @@ var SignInComponent = (function () {
     SignInComponent.prototype.ngOnInit = function () {
     };
     SignInComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-sign-in',
             template: __webpack_require__("../../../../../src/app/sign-in/sign-in.component.html"),
             styles: [__webpack_require__("../../../../../src/app/sign-in/sign-in.component.css")]
@@ -773,7 +864,7 @@ var SignUpComponent = (function () {
     SignUpComponent.prototype.ngOnInit = function () {
     };
     SignUpComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-sign-up',
             template: __webpack_require__("../../../../../src/app/sign-up/sign-up.component.html"),
             styles: [__webpack_require__("../../../../../src/app/sign-up/sign-up.component.css")]
@@ -834,7 +925,7 @@ var TrafficGeneralComponent = (function () {
     TrafficGeneralComponent.prototype.ngOnInit = function () {
     };
     TrafficGeneralComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-traffic-general',
             template: __webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.html"),
             styles: [__webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.css")]
@@ -895,7 +986,7 @@ var TrafficComponent = (function () {
     TrafficComponent.prototype.ngOnInit = function () {
     };
     TrafficComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-traffic',
             template: __webpack_require__("../../../../../src/app/traffic/traffic.component.html"),
             styles: [__webpack_require__("../../../../../src/app/traffic/traffic.component.css")]
@@ -939,11 +1030,280 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_7" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
 
+
+/***/ }),
+
+/***/ "../../../../moment/locale recursive ^\\.\\/.*$":
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "../../../../moment/locale/af.js",
+	"./af.js": "../../../../moment/locale/af.js",
+	"./ar": "../../../../moment/locale/ar.js",
+	"./ar-dz": "../../../../moment/locale/ar-dz.js",
+	"./ar-dz.js": "../../../../moment/locale/ar-dz.js",
+	"./ar-kw": "../../../../moment/locale/ar-kw.js",
+	"./ar-kw.js": "../../../../moment/locale/ar-kw.js",
+	"./ar-ly": "../../../../moment/locale/ar-ly.js",
+	"./ar-ly.js": "../../../../moment/locale/ar-ly.js",
+	"./ar-ma": "../../../../moment/locale/ar-ma.js",
+	"./ar-ma.js": "../../../../moment/locale/ar-ma.js",
+	"./ar-sa": "../../../../moment/locale/ar-sa.js",
+	"./ar-sa.js": "../../../../moment/locale/ar-sa.js",
+	"./ar-tn": "../../../../moment/locale/ar-tn.js",
+	"./ar-tn.js": "../../../../moment/locale/ar-tn.js",
+	"./ar.js": "../../../../moment/locale/ar.js",
+	"./az": "../../../../moment/locale/az.js",
+	"./az.js": "../../../../moment/locale/az.js",
+	"./be": "../../../../moment/locale/be.js",
+	"./be.js": "../../../../moment/locale/be.js",
+	"./bg": "../../../../moment/locale/bg.js",
+	"./bg.js": "../../../../moment/locale/bg.js",
+	"./bm": "../../../../moment/locale/bm.js",
+	"./bm.js": "../../../../moment/locale/bm.js",
+	"./bn": "../../../../moment/locale/bn.js",
+	"./bn.js": "../../../../moment/locale/bn.js",
+	"./bo": "../../../../moment/locale/bo.js",
+	"./bo.js": "../../../../moment/locale/bo.js",
+	"./br": "../../../../moment/locale/br.js",
+	"./br.js": "../../../../moment/locale/br.js",
+	"./bs": "../../../../moment/locale/bs.js",
+	"./bs.js": "../../../../moment/locale/bs.js",
+	"./ca": "../../../../moment/locale/ca.js",
+	"./ca.js": "../../../../moment/locale/ca.js",
+	"./cs": "../../../../moment/locale/cs.js",
+	"./cs.js": "../../../../moment/locale/cs.js",
+	"./cv": "../../../../moment/locale/cv.js",
+	"./cv.js": "../../../../moment/locale/cv.js",
+	"./cy": "../../../../moment/locale/cy.js",
+	"./cy.js": "../../../../moment/locale/cy.js",
+	"./da": "../../../../moment/locale/da.js",
+	"./da.js": "../../../../moment/locale/da.js",
+	"./de": "../../../../moment/locale/de.js",
+	"./de-at": "../../../../moment/locale/de-at.js",
+	"./de-at.js": "../../../../moment/locale/de-at.js",
+	"./de-ch": "../../../../moment/locale/de-ch.js",
+	"./de-ch.js": "../../../../moment/locale/de-ch.js",
+	"./de.js": "../../../../moment/locale/de.js",
+	"./dv": "../../../../moment/locale/dv.js",
+	"./dv.js": "../../../../moment/locale/dv.js",
+	"./el": "../../../../moment/locale/el.js",
+	"./el.js": "../../../../moment/locale/el.js",
+	"./en-au": "../../../../moment/locale/en-au.js",
+	"./en-au.js": "../../../../moment/locale/en-au.js",
+	"./en-ca": "../../../../moment/locale/en-ca.js",
+	"./en-ca.js": "../../../../moment/locale/en-ca.js",
+	"./en-gb": "../../../../moment/locale/en-gb.js",
+	"./en-gb.js": "../../../../moment/locale/en-gb.js",
+	"./en-ie": "../../../../moment/locale/en-ie.js",
+	"./en-ie.js": "../../../../moment/locale/en-ie.js",
+	"./en-il": "../../../../moment/locale/en-il.js",
+	"./en-il.js": "../../../../moment/locale/en-il.js",
+	"./en-nz": "../../../../moment/locale/en-nz.js",
+	"./en-nz.js": "../../../../moment/locale/en-nz.js",
+	"./eo": "../../../../moment/locale/eo.js",
+	"./eo.js": "../../../../moment/locale/eo.js",
+	"./es": "../../../../moment/locale/es.js",
+	"./es-do": "../../../../moment/locale/es-do.js",
+	"./es-do.js": "../../../../moment/locale/es-do.js",
+	"./es-us": "../../../../moment/locale/es-us.js",
+	"./es-us.js": "../../../../moment/locale/es-us.js",
+	"./es.js": "../../../../moment/locale/es.js",
+	"./et": "../../../../moment/locale/et.js",
+	"./et.js": "../../../../moment/locale/et.js",
+	"./eu": "../../../../moment/locale/eu.js",
+	"./eu.js": "../../../../moment/locale/eu.js",
+	"./fa": "../../../../moment/locale/fa.js",
+	"./fa.js": "../../../../moment/locale/fa.js",
+	"./fi": "../../../../moment/locale/fi.js",
+	"./fi.js": "../../../../moment/locale/fi.js",
+	"./fo": "../../../../moment/locale/fo.js",
+	"./fo.js": "../../../../moment/locale/fo.js",
+	"./fr": "../../../../moment/locale/fr.js",
+	"./fr-ca": "../../../../moment/locale/fr-ca.js",
+	"./fr-ca.js": "../../../../moment/locale/fr-ca.js",
+	"./fr-ch": "../../../../moment/locale/fr-ch.js",
+	"./fr-ch.js": "../../../../moment/locale/fr-ch.js",
+	"./fr.js": "../../../../moment/locale/fr.js",
+	"./fy": "../../../../moment/locale/fy.js",
+	"./fy.js": "../../../../moment/locale/fy.js",
+	"./gd": "../../../../moment/locale/gd.js",
+	"./gd.js": "../../../../moment/locale/gd.js",
+	"./gl": "../../../../moment/locale/gl.js",
+	"./gl.js": "../../../../moment/locale/gl.js",
+	"./gom-latn": "../../../../moment/locale/gom-latn.js",
+	"./gom-latn.js": "../../../../moment/locale/gom-latn.js",
+	"./gu": "../../../../moment/locale/gu.js",
+	"./gu.js": "../../../../moment/locale/gu.js",
+	"./he": "../../../../moment/locale/he.js",
+	"./he.js": "../../../../moment/locale/he.js",
+	"./hi": "../../../../moment/locale/hi.js",
+	"./hi.js": "../../../../moment/locale/hi.js",
+	"./hr": "../../../../moment/locale/hr.js",
+	"./hr.js": "../../../../moment/locale/hr.js",
+	"./hu": "../../../../moment/locale/hu.js",
+	"./hu.js": "../../../../moment/locale/hu.js",
+	"./hy-am": "../../../../moment/locale/hy-am.js",
+	"./hy-am.js": "../../../../moment/locale/hy-am.js",
+	"./id": "../../../../moment/locale/id.js",
+	"./id.js": "../../../../moment/locale/id.js",
+	"./is": "../../../../moment/locale/is.js",
+	"./is.js": "../../../../moment/locale/is.js",
+	"./it": "../../../../moment/locale/it.js",
+	"./it.js": "../../../../moment/locale/it.js",
+	"./ja": "../../../../moment/locale/ja.js",
+	"./ja.js": "../../../../moment/locale/ja.js",
+	"./jv": "../../../../moment/locale/jv.js",
+	"./jv.js": "../../../../moment/locale/jv.js",
+	"./ka": "../../../../moment/locale/ka.js",
+	"./ka.js": "../../../../moment/locale/ka.js",
+	"./kk": "../../../../moment/locale/kk.js",
+	"./kk.js": "../../../../moment/locale/kk.js",
+	"./km": "../../../../moment/locale/km.js",
+	"./km.js": "../../../../moment/locale/km.js",
+	"./kn": "../../../../moment/locale/kn.js",
+	"./kn.js": "../../../../moment/locale/kn.js",
+	"./ko": "../../../../moment/locale/ko.js",
+	"./ko.js": "../../../../moment/locale/ko.js",
+	"./ky": "../../../../moment/locale/ky.js",
+	"./ky.js": "../../../../moment/locale/ky.js",
+	"./lb": "../../../../moment/locale/lb.js",
+	"./lb.js": "../../../../moment/locale/lb.js",
+	"./lo": "../../../../moment/locale/lo.js",
+	"./lo.js": "../../../../moment/locale/lo.js",
+	"./lt": "../../../../moment/locale/lt.js",
+	"./lt.js": "../../../../moment/locale/lt.js",
+	"./lv": "../../../../moment/locale/lv.js",
+	"./lv.js": "../../../../moment/locale/lv.js",
+	"./me": "../../../../moment/locale/me.js",
+	"./me.js": "../../../../moment/locale/me.js",
+	"./mi": "../../../../moment/locale/mi.js",
+	"./mi.js": "../../../../moment/locale/mi.js",
+	"./mk": "../../../../moment/locale/mk.js",
+	"./mk.js": "../../../../moment/locale/mk.js",
+	"./ml": "../../../../moment/locale/ml.js",
+	"./ml.js": "../../../../moment/locale/ml.js",
+	"./mn": "../../../../moment/locale/mn.js",
+	"./mn.js": "../../../../moment/locale/mn.js",
+	"./mr": "../../../../moment/locale/mr.js",
+	"./mr.js": "../../../../moment/locale/mr.js",
+	"./ms": "../../../../moment/locale/ms.js",
+	"./ms-my": "../../../../moment/locale/ms-my.js",
+	"./ms-my.js": "../../../../moment/locale/ms-my.js",
+	"./ms.js": "../../../../moment/locale/ms.js",
+	"./mt": "../../../../moment/locale/mt.js",
+	"./mt.js": "../../../../moment/locale/mt.js",
+	"./my": "../../../../moment/locale/my.js",
+	"./my.js": "../../../../moment/locale/my.js",
+	"./nb": "../../../../moment/locale/nb.js",
+	"./nb.js": "../../../../moment/locale/nb.js",
+	"./ne": "../../../../moment/locale/ne.js",
+	"./ne.js": "../../../../moment/locale/ne.js",
+	"./nl": "../../../../moment/locale/nl.js",
+	"./nl-be": "../../../../moment/locale/nl-be.js",
+	"./nl-be.js": "../../../../moment/locale/nl-be.js",
+	"./nl.js": "../../../../moment/locale/nl.js",
+	"./nn": "../../../../moment/locale/nn.js",
+	"./nn.js": "../../../../moment/locale/nn.js",
+	"./pa-in": "../../../../moment/locale/pa-in.js",
+	"./pa-in.js": "../../../../moment/locale/pa-in.js",
+	"./pl": "../../../../moment/locale/pl.js",
+	"./pl.js": "../../../../moment/locale/pl.js",
+	"./pt": "../../../../moment/locale/pt.js",
+	"./pt-br": "../../../../moment/locale/pt-br.js",
+	"./pt-br.js": "../../../../moment/locale/pt-br.js",
+	"./pt.js": "../../../../moment/locale/pt.js",
+	"./ro": "../../../../moment/locale/ro.js",
+	"./ro.js": "../../../../moment/locale/ro.js",
+	"./ru": "../../../../moment/locale/ru.js",
+	"./ru.js": "../../../../moment/locale/ru.js",
+	"./sd": "../../../../moment/locale/sd.js",
+	"./sd.js": "../../../../moment/locale/sd.js",
+	"./se": "../../../../moment/locale/se.js",
+	"./se.js": "../../../../moment/locale/se.js",
+	"./si": "../../../../moment/locale/si.js",
+	"./si.js": "../../../../moment/locale/si.js",
+	"./sk": "../../../../moment/locale/sk.js",
+	"./sk.js": "../../../../moment/locale/sk.js",
+	"./sl": "../../../../moment/locale/sl.js",
+	"./sl.js": "../../../../moment/locale/sl.js",
+	"./sq": "../../../../moment/locale/sq.js",
+	"./sq.js": "../../../../moment/locale/sq.js",
+	"./sr": "../../../../moment/locale/sr.js",
+	"./sr-cyrl": "../../../../moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "../../../../moment/locale/sr-cyrl.js",
+	"./sr.js": "../../../../moment/locale/sr.js",
+	"./ss": "../../../../moment/locale/ss.js",
+	"./ss.js": "../../../../moment/locale/ss.js",
+	"./sv": "../../../../moment/locale/sv.js",
+	"./sv.js": "../../../../moment/locale/sv.js",
+	"./sw": "../../../../moment/locale/sw.js",
+	"./sw.js": "../../../../moment/locale/sw.js",
+	"./ta": "../../../../moment/locale/ta.js",
+	"./ta.js": "../../../../moment/locale/ta.js",
+	"./te": "../../../../moment/locale/te.js",
+	"./te.js": "../../../../moment/locale/te.js",
+	"./tet": "../../../../moment/locale/tet.js",
+	"./tet.js": "../../../../moment/locale/tet.js",
+	"./tg": "../../../../moment/locale/tg.js",
+	"./tg.js": "../../../../moment/locale/tg.js",
+	"./th": "../../../../moment/locale/th.js",
+	"./th.js": "../../../../moment/locale/th.js",
+	"./tl-ph": "../../../../moment/locale/tl-ph.js",
+	"./tl-ph.js": "../../../../moment/locale/tl-ph.js",
+	"./tlh": "../../../../moment/locale/tlh.js",
+	"./tlh.js": "../../../../moment/locale/tlh.js",
+	"./tr": "../../../../moment/locale/tr.js",
+	"./tr.js": "../../../../moment/locale/tr.js",
+	"./tzl": "../../../../moment/locale/tzl.js",
+	"./tzl.js": "../../../../moment/locale/tzl.js",
+	"./tzm": "../../../../moment/locale/tzm.js",
+	"./tzm-latn": "../../../../moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "../../../../moment/locale/tzm-latn.js",
+	"./tzm.js": "../../../../moment/locale/tzm.js",
+	"./ug-cn": "../../../../moment/locale/ug-cn.js",
+	"./ug-cn.js": "../../../../moment/locale/ug-cn.js",
+	"./uk": "../../../../moment/locale/uk.js",
+	"./uk.js": "../../../../moment/locale/uk.js",
+	"./ur": "../../../../moment/locale/ur.js",
+	"./ur.js": "../../../../moment/locale/ur.js",
+	"./uz": "../../../../moment/locale/uz.js",
+	"./uz-latn": "../../../../moment/locale/uz-latn.js",
+	"./uz-latn.js": "../../../../moment/locale/uz-latn.js",
+	"./uz.js": "../../../../moment/locale/uz.js",
+	"./vi": "../../../../moment/locale/vi.js",
+	"./vi.js": "../../../../moment/locale/vi.js",
+	"./x-pseudo": "../../../../moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "../../../../moment/locale/x-pseudo.js",
+	"./yo": "../../../../moment/locale/yo.js",
+	"./yo.js": "../../../../moment/locale/yo.js",
+	"./zh-cn": "../../../../moment/locale/zh-cn.js",
+	"./zh-cn.js": "../../../../moment/locale/zh-cn.js",
+	"./zh-hk": "../../../../moment/locale/zh-hk.js",
+	"./zh-hk.js": "../../../../moment/locale/zh-hk.js",
+	"./zh-tw": "../../../../moment/locale/zh-tw.js",
+	"./zh-tw.js": "../../../../moment/locale/zh-tw.js"
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "../../../../moment/locale recursive ^\\.\\/.*$";
 
 /***/ }),
 

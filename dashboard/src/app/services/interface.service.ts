@@ -7,18 +7,13 @@ export class InterfaceService {
 
   constructor(public http: Http) {
     console.log(window.location.origin + " >>>>>>>> ");
-    
   }
 
   public getUpload(): Observable<any> {
-    return this.http.get(window.location.origin + '/uploads')(res: Response) => {
-      return res.json()
-    });
+    return this.http.get(window.location.origin + '/uploads');
   }
 
   public getDownload(): Observable<any> {
-    return this.http.get(window.location.origin + '/downloads').map((res: Response) => {
-      return res.json();
-    });
+    return this.http.get(window.location.origin + '/downloads');
   }
 }

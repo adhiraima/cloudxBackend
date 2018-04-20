@@ -1,12 +1,20 @@
-<div class="d-flex flex-row align-items-stretch">
+<div class="d-flex flex-row align-items-stretch" style="height: 585px; padding-bottom: 5px;">
   <div class="p-2">
       <app-map-info></app-map-info>
   </div>
-  <div class="p-2 tables-sec" style="width: 50%;">
+  <div class="p-2 tables-sec" style="width: 60%;">
     <div class="d-flex flex-column align-items-stretch">
-      <div class="p-2"><app-interface-stats></app-interface-stats></div>
-      <div class="p-2"><app-traffic></app-traffic></div>
-      <div class="p-2"><app-traffic-general></app-traffic-general></div>
+      <ngb-carousel style="width: 100%">
+        <ng-template ngbSlide>
+            <div class="p-2"><app-interface-stats></app-interface-stats></div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="p-2"><app-traffic></app-traffic></div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="p-2"><app-traffic-general></app-traffic-general></div>
+        </ng-template>
+      </ngb-carousel>
     </div>
   </div>
 </div>

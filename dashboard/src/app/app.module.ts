@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { HttpModule } from "@angular/http";
-
+import { ChartModule } from 'angular2-chartjs';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap/carousel/carousel-config'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -34,18 +36,21 @@ import { InterfaceService } from './services/interface.service';
     TrafficGeneralComponent
   ],
   imports: [
+    ChartModule,
     BrowserModule,
     HttpClientModule,
     HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDQjzCwLrrJYU9Tk7W7MnqcmZYIrCVeHqs'
-    })
+    }),
+    NgbModule
   ],
   providers: [
-              SharedService, 
-              TrafficService, 
-              InterfaceService
-             ],
+    SharedService, 
+    TrafficService, 
+    InterfaceService,
+    NgbCarouselConfig
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

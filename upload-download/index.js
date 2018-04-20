@@ -6,7 +6,7 @@ var interfaces = {
                         max:  100,
                         integer: true
                         };
-        return rn(options);
+        return random(options);
     },
     getDownload: function() {
         var options = {
@@ -14,7 +14,7 @@ var interfaces = {
                         max:  100,
                         integer: true
                         };
-        return rn(options);
+        return random(options);
     }
 };
 

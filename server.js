@@ -27,12 +27,12 @@ app.get('/hosts', function(req, res){
 
 app.get('/uploads', function(req, res) {
     res.type('application/json');
-    res.send(JSON.stringify({'upload': interfaces.getUpload()}));
+    res.send(JSON.stringify(interfaces.getUpload()));
 });
 
 app.get('/downloads', function(req, res) {
     res.type('application/json');
-    res.send(JSON.stringify({'download': interfaces.getDownload()}));
+    res.send(JSON.stringify(interfaces.getDownload()));
 });
 
 app.use(function(req, res){

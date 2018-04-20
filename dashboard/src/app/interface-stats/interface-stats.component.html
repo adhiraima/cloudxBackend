@@ -6,17 +6,37 @@
       <tbody>
         <tr>
           <th rowspan="2">WLAN</th>
-          <th scope="row">Upload</th><td><label>Upload Graph</label></td>
+          <th scope="row">Upload</th>
+          <td>
+            <div class="chartHolder">
+              <chart [type]="type" [data]="dataWlUpload" [options]="options"></chart>
+            </div>
+          </td>
         </tr>
         <tr>
-          <th scope="row">Download</th><td><label>Download Graph</label></td>
+          <th scope="row">Download</th>
+          <td>
+            <div class="chartHolder">
+              <chart [type]="type" [data]="dataWlDownload" [options]="options"></chart>
+            </div>
+          </td>
         </tr>
         <tr>
           <th rowspan="2">Ethernet</th>
-            <th scope="row">Upload</th><td><label>Upload Graph</label></td>
+            <th scope="row">Upload</th>
+            <td>
+              <div class="chartHolder">
+                <chart [type]="type" [data]="dataEthUpload" [options]="options"></chart>
+              </div>
+            </td>
           </tr>
           <tr>
-            <th scope="row">Download</th><td><label>Download Graph</label></td>
+            <th scope="row">Download</th>
+            <td>
+              <div class="chartHolder">
+                <chart [type]="type" [data]="dataEthDownload" [options]="options"></chart>
+              </div>
+            </td>
         </tr>
       </tbody>
     </table>
