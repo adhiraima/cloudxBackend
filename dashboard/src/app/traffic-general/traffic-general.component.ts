@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TrafficService } from '../services/traffic.service';
+import { _ } from 'underscore';
 @Component({
   selector: 'app-traffic-general',
   templateUrl: './traffic-general.component.html',
@@ -24,8 +25,12 @@ export class TrafficGeneralComponent implements OnInit {
   getTrafficGeneral() {
     this.trafficService.getTrafficGeneral().subscribe((res) => {
       if (res) {
-        console.log("data >>>>> " + JSON.parse(res.text()).data);
-        this.hosts = JSON.parse(res.text()).data;
+        let hostsDirty = JSON.parse(res.text()).data;
+        _.each(hostsDirty, function(hostEntry) {
+          hostEntry.column_thpt = hostEntry.column_thpt.substring(0, hostEntry.column_thpt.indexOf('<') - 1);
+        });
+        this.hosts = hostsDirty;
+        console.log("country the response in frontend >>>>>" + JSON.stringify(hostsDirty));
       } else {
         this.hosts = [];
       }

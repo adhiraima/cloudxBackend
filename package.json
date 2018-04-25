@@ -22,7 +22,8 @@
     "chart.js": "^2.7.2",
     "express": "^4.16.3",
     "ng2-chartjs": "^1.0.1",
-    "random-number": "0.0.9"
+    "random-number": "0.0.9",
+    "underscore": "^1.9.0"
   },
   "devDependencies": {
     "@types/chartjs": "0.0.31"

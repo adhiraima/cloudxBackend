@@ -12,16 +12,16 @@
         </tr>
       </thead>
       <tbody>
-        <div *ngIf="hosts">
-          <tr *ngFor="let row of hosts">
-            <td>{{ row.key }}</td>
-            <td>{{ row.column_name }}</td>
-            <td>{{ row.column_since }}</td>
-            <td>{{ row.column_last }}</td>
-            <td>{{ row.column_traffic }}</td>
-            <td>{{ row.column_thpt }}</td>
+        <!-- <div *ngIf="hosts"> -->
+          <tr *ngFor="let host of hosts">
+            <td>{{ host.key }}</td>
+            <td>{{ host.column_name }}</td>
+            <td>{{ host.column_since }}</td>
+            <td>{{ host.column_last }}</td>
+            <td>{{ host.column_traffic }}</td>
+            <td>{{ host.column_thpt }}</td>
           </tr>
-        </div>  
+        <!-- </div>   -->
       </tbody>
     </table>
 </div>

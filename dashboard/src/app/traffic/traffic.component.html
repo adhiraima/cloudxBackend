@@ -13,12 +13,12 @@
       </thead>
       <tbody>
         <div *ngIf="countrie">
-          <tr *ngFor="let row of countries">
-            <td>{{ row.key }}</td>
-            <td>{{ row.column_hosts }}</td>
-            <td>{{ row.column_since }}</td>
-            <td>{{ row.thpt }}</td>
-            <td>{{ row.column_traffic }}</td>
+          <tr *ngFor="let country of countries">
+            <td>{{ country.key }}</td>
+            <td>{{ country.column_hosts }}</td>
+            <td>{{ country.column_since }}</td>
+            <td>{{ country.thpt }}</td>
+            <td>{{ country.column_traffic }}</td>
           </tr>
         </div>
       </tbody>

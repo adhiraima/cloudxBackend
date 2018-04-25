@@ -23,7 +23,6 @@ export class TrafficComponent implements OnInit {
 
   getTrafficByCountry() {
     this.trafficService.getTrafficCountry().subscribe((res) => {
-      console.log("country the response in frontend >>>>>" + res.text() + ">>>>>>" + res);
       if (res)
         this.countries = JSON.parse(res.text()).data;
       else
