@@ -3,4 +3,4 @@ ng build
 rm -rf ../public/*.*
 cp -r dist/*.* ../public
 cd ..
-npm start
+npm start $1

@@ -3,17 +3,25 @@
   <table class="table table-striped">
       <thead>
         <tr>
-          <th rowspan="2">WLAN</th>
-          <th rowspan="2">Location</th>
-          <th>Alerts</th>
-          <th>Names</th>
+          <th>IP</th>
+          <th>Name</th>
           <th>Seen Since</th>
-          <th>Breakdown</th>
+          <th>Last Seen</th>
           <th>Traffic</th>
+          <th>Throughput</th>
         </tr>
       </thead>
       <tbody>
-        
+        <div *ngIf="hosts">
+          <tr *ngFor="let row of hosts">
+            <td>{{ row.key }}</td>
+            <td>{{ row.column_name }}</td>
+            <td>{{ row.column_since }}</td>
+            <td>{{ row.column_last }}</td>
+            <td>{{ row.column_traffic }}</td>
+            <td>{{ row.column_thpt }}</td>
+          </tr>
+        </div>  
       </tbody>
     </table>
 </div>

@@ -3,50 +3,51 @@ var http = require('http');
 var options = { 
     hostname: 'localhost',
     port: 3000,
-    path: '/lua/get_grouped_hosts_data.lua?grouped_by=country&currentPage=1&perPage=10&sortColumn=column_&sortOrder=desc',
-    method: 'GET',
-    headers: {'Cookie': 'session='+ global.sessionToken +'; user=admin'}
+    path: '/lua/get_grouped_hosts_data.lua?grouped_by=country',
+    method: 'GET'
 }
 
 var optionsGeneral = { 
     hostname: 'localhost',
     port: 3000,
     path: '/lua/get_hosts_data.lua?mode=all',
-    method: 'GET',
-    headers: {'Cookie': 'session='+ global.sessionToken +'; user=admin'}
+    method: 'GET'
 }
 
 var traffic = {
-    getTraffic: function() {
+    getTraffic: function(callback) {
+        options.headers = {}
+        options.headers['Cookie'] = 'session='+global.sessionToken+'; user=admin';
         let results = '';
         var request = http.request(options, function(response) {
-                response.on('data', function(chunk) {
-                results = results + chunk
+            response.on('data', function(chunk) {
+                results = results + chunk;
             });
             response.on('end', function() {
-                return results.data;
+                callback(results);
             });
         });
         request.on('error', function(e) {
-            return results;
+            callback(results);
         });
-        
         request.end();
     },
-    getGeneralTraffic: function() {
+    getGeneralTraffic: function(callback) {
         let results = '';
+        optionsGeneral.headers = {}
+        optionsGeneral.headers['Cookie'] = 'session='+global.sessionToken+'; user=admin';
         var request = http.request(optionsGeneral, function(response) {
-                response.on('data', function(chunk) {
-                results = results + chunk
+            response.on('data', function(chunk) {
+                results = results + chunk;
             });
             response.on('end', function() {
-                return results.data;
+                callback(results);
             });
         });
         request.on('error', function(e) {
-            return results;
+            console.log("error" + e);
+            callback(results);
         });
-        
         request.end();
     }
 };

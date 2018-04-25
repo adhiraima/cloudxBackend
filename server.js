@@ -31,22 +31,26 @@ app.get('/hosts', function(req, res){
 
 app.get('/uploads', function(req, res) {
     res.type('application/json');
-    res.send(JSON.stringify(interfaces.getUpload(sessionToken)));
+    res.send(JSON.stringify(interfaces.getUpload()));
 });
 
 app.get('/downloads', function(req, res) {
     res.type('application/json');
-    res.send(JSON.stringify(interfaces.getDownload(sessionToken)));
+    res.send(JSON.stringify(interfaces.getDownload()));
 });
 
 app.get('/traffic-country', function(req, res) {
     res.type('application/json');
-    res.send(JSON.stringify(traffic.getTraffic(sessionToken)));
+    traffic.getTraffic(function(result) {
+        res.send(result);
+    });
 });
 
 app.get('/traffic-general', function(req, res) {
     res.type('application/json');
-    res.send(JSON.stringify(traffic.getGeneralTraffic(sessionToken)));
+    traffic.getGeneralTraffic(function(result) {
+        res.send(result);
+    });
 });
 
 app.use(function(req, res){

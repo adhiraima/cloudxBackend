@@ -300,7 +300,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "app-interface-stats {\n    font-size: 0.8em;\n    width: 600px;\n}\n\nth {\n    background-color: lightgray;\n}\n\nchart {\n    height: 120px;\n    width: 600px;\n}", ""]);
+exports.push([module.i, "app-interface-stats {\n    font-size: 0.8em;\n    width: 600px;\n}\n\nth {\n    background-color: lightgray;\n}\n\nchart {\n    height: 105px;\n    width: 600px;\n}", ""]);
 
 // exports
 
@@ -909,7 +909,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/traffic-general/traffic-general.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><strong>Traffic (General)</strong></div>\n  <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th rowspan=\"2\">WLAN</th>\n          <th rowspan=\"2\">Location</th>\n          <th>Alerts</th>\n          <th>Names</th>\n          <th>Seen Since</th>\n          <th>Breakdown</th>\n          <th>Traffic</th>\n        </tr>\n      </thead>\n      <tbody>\n        \n      </tbody>\n    </table>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><strong>Traffic (General)</strong></div>\n  <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th>IP</th>\n          <th>Name</th>\n          <th>Seen Since</th>\n          <th>Last Seen</th>\n          <th>Traffic</th>\n          <th>Throughput</th>\n        </tr>\n      </thead>\n      <tbody>\n        <div *ngIf=\"hosts\">\n          <tr *ngFor=\"let row of hosts\">\n            <td>{{ row.key }}</td>\n            <td>{{ row.column_name }}</td>\n            <td>{{ row.column_since }}</td>\n            <td>{{ row.column_last }}</td>\n            <td>{{ row.column_traffic }}</td>\n            <td>{{ row.column_thpt }}</td>\n          </tr>\n        </div>  \n      </tbody>\n    </table>\n</div>\n"
 
 /***/ }),
 
@@ -919,6 +919,7 @@ module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrafficGeneralComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_traffic_service__ = __webpack_require__("../../../../../src/app/services/traffic.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -929,10 +930,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var TrafficGeneralComponent = (function () {
-    function TrafficGeneralComponent() {
+    function TrafficGeneralComponent(trafficService) {
+        this.trafficService = trafficService;
+        this.timeOut = 2000;
     }
     TrafficGeneralComponent.prototype.ngOnInit = function () {
+        this.getTrafficGeneral();
+    };
+    TrafficGeneralComponent.prototype.ngOnDestroy = function () {
+        clearTimeout(this.timeOut);
+    };
+    TrafficGeneralComponent.prototype.getTrafficGeneral = function () {
+        var _this = this;
+        this.trafficService.getTrafficGeneral().subscribe(function (res) {
+            if (res) {
+                console.log("data >>>>> " + JSON.parse(res.text()).data);
+                _this.hosts = JSON.parse(res.text()).data;
+            }
+            else {
+                _this.hosts = [];
+            }
+        });
+        setTimeout(function () {
+            _this.getTrafficGeneral();
+        }, this.timeOut);
     };
     TrafficGeneralComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -940,7 +963,7 @@ var TrafficGeneralComponent = (function () {
             template: __webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.html"),
             styles: [__webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_traffic_service__["a" /* TrafficService */]])
     ], TrafficGeneralComponent);
     return TrafficGeneralComponent;
 }());
@@ -970,7 +993,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/traffic/traffic.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\">\n    <strong>Traffic By Country</strong>\n    <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th class=\"fromHeader\">Country</th>\n          <th class=\"fromHeader\"># Hosts</th>\n          <th class=\"fromHeader\">Active Since</th>\n          <th class=\"fromHeader\">Throughput</th>\n          <th class=\"fromHeader\">Volume</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"row of countries\">\n          <td>{{ row.key }}</td>\n          <td>{{ row.column_hosts }}</td>\n          <td>{{ row.column_since }}</td>\n          <td>{{ row.thpt }}</td>\n          <td>{{ row.column_traffic }}</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\">\n    <strong>Traffic By Country</strong>\n    <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th class=\"fromHeader\">Country</th>\n          <th class=\"fromHeader\"># Hosts</th>\n          <th class=\"fromHeader\">Active Since</th>\n          <th class=\"fromHeader\">Throughput</th>\n          <th class=\"fromHeader\">Volume</th>\n        </tr>\n      </thead>\n      <tbody>\n        <div *ngIf=\"countrie\">\n          <tr *ngFor=\"let row of countries\">\n            <td>{{ row.key }}</td>\n            <td>{{ row.column_hosts }}</td>\n            <td>{{ row.column_since }}</td>\n            <td>{{ row.thpt }}</td>\n            <td>{{ row.column_traffic }}</td>\n          </tr>\n        </div>\n      </tbody>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -980,6 +1003,7 @@ module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrafficComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_traffic_service__ = __webpack_require__("../../../../../src/app/services/traffic.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -990,10 +1014,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var TrafficComponent = (function () {
-    function TrafficComponent() {
+    function TrafficComponent(trafficService) {
+        this.trafficService = trafficService;
+        this.timeOut = 2000;
     }
     TrafficComponent.prototype.ngOnInit = function () {
+        this.getTrafficByCountry();
+    };
+    TrafficComponent.prototype.ngOnDestroy = function () {
+        clearTimeout(this.timeOut);
+    };
+    TrafficComponent.prototype.getTrafficByCountry = function () {
+        var _this = this;
+        this.trafficService.getTrafficCountry().subscribe(function (res) {
+            console.log("country the response in frontend >>>>>" + res.text() + ">>>>>>" + res);
+            if (res)
+                _this.countries = JSON.parse(res.text()).data;
+            else
+                _this.countries = [];
+        });
+        setTimeout(function () {
+            _this.getTrafficByCountry();
+        }, this.timeOut);
     };
     TrafficComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1001,7 +1045,7 @@ var TrafficComponent = (function () {
             template: __webpack_require__("../../../../../src/app/traffic/traffic.component.html"),
             styles: [__webpack_require__("../../../../../src/app/traffic/traffic.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_traffic_service__["a" /* TrafficService */]])
     ], TrafficComponent);
     return TrafficComponent;
 }());
