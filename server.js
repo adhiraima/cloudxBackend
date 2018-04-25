@@ -6,8 +6,12 @@ var certificate = fs.readFileSync('certs/cloudx.crt', 'utf8');
 var express = require('express');
 
 var interfaces = require('./upload-download/index.js');
+var traffic = require('./traffic/index.js');
 
 var credentials = {key: privateKey, cert: certificate};
+
+var args = process.argv;
+global.sessionToken = args[args.length - 1];
 
 var app = express();
 
@@ -27,12 +31,22 @@ app.get('/hosts', function(req, res){
 
 app.get('/uploads', function(req, res) {
     res.type('application/json');
-    res.send(JSON.stringify(interfaces.getUpload()));
+    res.send(JSON.stringify(interfaces.getUpload(sessionToken)));
 });
 
 app.get('/downloads', function(req, res) {
     res.type('application/json');
-    res.send(JSON.stringify(interfaces.getDownload()));
+    res.send(JSON.stringify(interfaces.getDownload(sessionToken)));
+});
+
+app.get('/traffic-country', function(req, res) {
+    res.type('application/json');
+    res.send(JSON.stringify(traffic.getTraffic(sessionToken)));
+});
+
+app.get('/traffic-general', function(req, res) {
+    res.type('application/json');
+    res.send(JSON.stringify(traffic.getGeneralTraffic(sessionToken)));
 });
 
 app.use(function(req, res){

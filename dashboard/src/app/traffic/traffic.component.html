@@ -4,18 +4,22 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th colspan="2" class="fromHeader">From</th>
-          <th colspan="4" class="toHeader">To</th>
-        </tr>
-        <tr>
-          <th class="fromHeader">Device Type</th>
-          <th class="fromHeader">Source IP</th>
-          <th class="toHeader">Destination IP</th>
-          <th class="toHeader">DNS Name</th>
-          <th class="toHeader">Country</th>
-          <th class="toHeader">ASN</th>
+          <th class="fromHeader">Country</th>
+          <th class="fromHeader"># Hosts</th>
+          <th class="fromHeader">Active Since</th>
+          <th class="fromHeader">Throughput</th>
+          <th class="fromHeader">Volume</th>
         </tr>
       </thead>
+      <tbody>
+        <tr ng-repeat="row of countries">
+          <td>{{ row.key }}</td>
+          <td>{{ row.column_hosts }}</td>
+          <td>{{ row.column_since }}</td>
+          <td>{{ row.thpt }}</td>
+          <td>{{ row.column_traffic }}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>

@@ -732,6 +732,7 @@ var SharedService = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TrafficService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -742,12 +743,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var TrafficService = (function () {
-    function TrafficService() {
+    function TrafficService(http) {
+        this.http = http;
+        console.log('initiialized.. traffic service!!');
     }
+    TrafficService.prototype.getTrafficCountry = function () {
+        return this.http.get(window.location.origin + '/traffic-country');
+    };
+    TrafficService.prototype.getTrafficGeneral = function () {
+        return this.http.get(window.location.origin + '/traffic-general');
+    };
     TrafficService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
     ], TrafficService);
     return TrafficService;
 }());
@@ -960,7 +970,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/traffic/traffic.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\">\n    <strong>Traffic By Country</strong>\n    <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th colspan=\"2\" class=\"fromHeader\">From</th>\n          <th colspan=\"4\" class=\"toHeader\">To</th>\n        </tr>\n        <tr>\n          <th class=\"fromHeader\">Device Type</th>\n          <th class=\"fromHeader\">Source IP</th>\n          <th class=\"toHeader\">Destination IP</th>\n          <th class=\"toHeader\">DNS Name</th>\n          <th class=\"toHeader\">Country</th>\n          <th class=\"toHeader\">ASN</th>\n        </tr>\n      </thead>\n    </table>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\">\n    <strong>Traffic By Country</strong>\n    <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th class=\"fromHeader\">Country</th>\n          <th class=\"fromHeader\"># Hosts</th>\n          <th class=\"fromHeader\">Active Since</th>\n          <th class=\"fromHeader\">Throughput</th>\n          <th class=\"fromHeader\">Volume</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"row of countries\">\n          <td>{{ row.key }}</td>\n          <td>{{ row.column_hosts }}</td>\n          <td>{{ row.column_since }}</td>\n          <td>{{ row.thpt }}</td>\n          <td>{{ row.column_traffic }}</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 
