@@ -5,7 +5,8 @@ import { AgmCoreModule } from '@agm/core';
 import { HttpModule } from "@angular/http";
 import { ChartModule } from 'angular2-chartjs';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap/carousel/carousel-config'
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap/carousel/carousel-config';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -43,7 +44,8 @@ import { InterfaceService } from './services/interface.service';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDQjzCwLrrJYU9Tk7W7MnqcmZYIrCVeHqs'
     }),
-    NgbModule
+    NgbModule,
+    NgxPaginationModule
   ],
   providers: [
     SharedService, 

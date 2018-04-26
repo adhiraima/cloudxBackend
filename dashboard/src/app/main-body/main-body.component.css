@@ -1,13 +1,10 @@
 * {
     font-family: Lato;
-    font-size: 11px;
+    font-size: 9px;
 }
 
 .carousel-control-next-icon {
     color: black;
 }
 
-ngb-carousel {
-    overflow-y: auto;
-}
 

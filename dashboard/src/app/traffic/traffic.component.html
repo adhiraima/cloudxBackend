@@ -12,16 +12,21 @@
         </tr>
       </thead>
       <tbody>
-        <div *ngIf="countrie">
-          <tr *ngFor="let country of countries">
-            <td>{{ country.key }}</td>
-            <td>{{ country.column_hosts }}</td>
-            <td>{{ country.column_since }}</td>
-            <td>{{ country.thpt }}</td>
-            <td>{{ country.column_traffic }}</td>
-          </tr>
-        </div>
+        <tr *ngFor="let country of countries | paginate: { itemsPerPage: pageSize, currentPage: currentPage, totalItems: total }">
+          <td>{{ country.key }}</td>
+          <td>{{ country.column_hosts }}</td>
+          <td>{{ country.column_since }}</td>
+          <td>{{ country.thpt }}</td>
+          <td>{{ country.column_traffic }}</td>
+        </tr>
       </tbody>
     </table>
+  </div>
+  <div style="align-content: center;">
+      <pagination-controls
+      id="country_paination"
+      (pageChange)="currentPage = $event"
+      previousLabel="Previous"
+      nextLabel="Next"></pagination-controls>
   </div>
 </div>

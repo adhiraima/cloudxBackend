@@ -1784,19 +1784,20 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_chartjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ng_bootstrap_ng_bootstrap_carousel_carousel_config__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/carousel/carousel-config.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__header_header_component__ = __webpack_require__("../../../../../src/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__sign_in_sign_in_component__ = __webpack_require__("../../../../../src/app/sign-in/sign-in.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__sign_up_sign_up_component__ = __webpack_require__("../../../../../src/app/sign-up/sign-up.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__main_body_main_body_component__ = __webpack_require__("../../../../../src/app/main-body/main-body.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__map_info_map_info_component__ = __webpack_require__("../../../../../src/app/map-info/map-info.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__interface_stats_interface_stats_component__ = __webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__traffic_traffic_component__ = __webpack_require__("../../../../../src/app/traffic/traffic.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__traffic_general_traffic_general_component__ = __webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_shared_service__ = __webpack_require__("../../../../../src/app/services/shared.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_traffic_service__ = __webpack_require__("../../../../../src/app/services/traffic.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_interface_service__ = __webpack_require__("../../../../../src/app/services/interface.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_pagination__ = __webpack_require__("../../../../ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__header_header_component__ = __webpack_require__("../../../../../src/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__footer_footer_component__ = __webpack_require__("../../../../../src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__sign_in_sign_in_component__ = __webpack_require__("../../../../../src/app/sign-in/sign-in.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__sign_up_sign_up_component__ = __webpack_require__("../../../../../src/app/sign-up/sign-up.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__main_body_main_body_component__ = __webpack_require__("../../../../../src/app/main-body/main-body.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__map_info_map_info_component__ = __webpack_require__("../../../../../src/app/map-info/map-info.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__interface_stats_interface_stats_component__ = __webpack_require__("../../../../../src/app/interface-stats/interface-stats.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__traffic_traffic_component__ = __webpack_require__("../../../../../src/app/traffic/traffic.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__traffic_general_traffic_general_component__ = __webpack_require__("../../../../../src/app/traffic-general/traffic-general.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_shared_service__ = __webpack_require__("../../../../../src/app/services/shared.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_traffic_service__ = __webpack_require__("../../../../../src/app/services/traffic.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_interface_service__ = __webpack_require__("../../../../../src/app/services/interface.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1824,22 +1825,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__sign_in_sign_in_component__["a" /* SignInComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__sign_up_sign_up_component__["a" /* SignUpComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__main_body_main_body_component__["a" /* MainBodyComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__map_info_map_info_component__["a" /* MapInfoComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__interface_stats_interface_stats_component__["a" /* InterfaceStatsComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__traffic_traffic_component__["a" /* TrafficComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__traffic_general_traffic_general_component__["a" /* TrafficGeneralComponent */]
+                __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__sign_in_sign_in_component__["a" /* SignInComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__sign_up_sign_up_component__["a" /* SignUpComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__main_body_main_body_component__["a" /* MainBodyComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__map_info_map_info_component__["a" /* MapInfoComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__interface_stats_interface_stats_component__["a" /* InterfaceStatsComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__traffic_traffic_component__["a" /* TrafficComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__traffic_general_traffic_general_component__["a" /* TrafficGeneralComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_5_angular2_chartjs__["ChartModule"],
@@ -1849,15 +1851,16 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_3__agm_core__["a" /* AgmCoreModule */].forRoot({
                     apiKey: 'AIzaSyDQjzCwLrrJYU9Tk7W7MnqcmZYIrCVeHqs'
                 }),
-                __WEBPACK_IMPORTED_MODULE_6__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */]
+                __WEBPACK_IMPORTED_MODULE_6__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */],
+                __WEBPACK_IMPORTED_MODULE_8_ngx_pagination__["a" /* NgxPaginationModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_18__services_shared_service__["a" /* SharedService */],
-                __WEBPACK_IMPORTED_MODULE_19__services_traffic_service__["a" /* TrafficService */],
-                __WEBPACK_IMPORTED_MODULE_20__services_interface_service__["a" /* InterfaceService */],
+                __WEBPACK_IMPORTED_MODULE_19__services_shared_service__["a" /* SharedService */],
+                __WEBPACK_IMPORTED_MODULE_20__services_traffic_service__["a" /* TrafficService */],
+                __WEBPACK_IMPORTED_MODULE_21__services_interface_service__["a" /* InterfaceService */],
                 __WEBPACK_IMPORTED_MODULE_7__ng_bootstrap_ng_bootstrap_carousel_carousel_config__["a" /* NgbCarouselConfig */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -1997,7 +2000,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "app-interface-stats {\n    font-size: 0.8em;\n    width: 600px;\n}\n\nth {\n    background-color: lightgray;\n}\n\nchart {\n    height: 105px;\n    width: 600px;\n}", ""]);
+exports.push([module.i, "app-interface-stats {\n    font-size: 0.5em;\n    width: 480px;\n}\n\nth {\n    background-color: lightgray;\n}\n\nchart {\n    height: 85px;\n    width: 480px;\n}", ""]);
 
 // exports
 
@@ -2168,7 +2171,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "* {\n    font-family: Lato;\n    font-size: 11px;\n}\n\n.carousel-control-next-icon {\n    color: black;\n}\n\nngb-carousel {\n    overflow-y: auto;\n}\n\n", ""]);
+exports.push([module.i, "* {\n    font-family: Lato;\n    font-size: 9px;\n}\n\n.carousel-control-next-icon {\n    color: black;\n}\n\n\n", ""]);
 
 // exports
 
@@ -2209,11 +2212,6 @@ var MainBodyComponent = (function () {
         this.data = 'No Data fetched yet!!';
     }
     MainBodyComponent.prototype.ngOnInit = function () {
-        // const httpOptions = { headers: new HttpHeaders({'Cookie': 'user=admin; session=724e3820ca5f317906df81bad926f771'})};
-        // this.http.get('http://localhost:3000/lua/network_load.lua', httpOptions).subscribe(
-        //   response => this.data = response.toString(),
-        //   error => console.log(error)
-        // );
     };
     MainBodyComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2238,7 +2236,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "agm-map {\n    height: 590px;\n    width: 650px;\n}\n\n* {\n    font-family: Lato;\n    font-size: 0.2 em;\n}\n\n", ""]);
+exports.push([module.i, "agm-map {\n    height: 500px;\n    width: 650px;\n}\n\n* {\n    font-family: Lato;\n    font-size: 0.2 em;\n}\n\n", ""]);
 
 // exports
 
@@ -2593,7 +2591,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "th {\n    background-color: lightgray;\n    height: 30%;\n}\n\ntd {\n    height: 30%;\n}\n", ""]);
+exports.push([module.i, "th {\n    background-color: lightgray;\n    height: 20%;\n}\n\ntd {\n    height: 20%;\n}\n", ""]);
 
 // exports
 
@@ -2606,7 +2604,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/traffic-general/traffic-general.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><strong>Traffic (General)</strong></div>\n  <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th>IP</th>\n          <th>Name</th>\n          <th>Seen Since</th>\n          <th>Last Seen</th>\n          <th>Traffic</th>\n          <th>Throughput</th>\n        </tr>\n      </thead>\n      <tbody>\n        <!-- <div *ngIf=\"hosts\"> -->\n          <tr *ngFor=\"let host of hosts\">\n            <td>{{ host.key }}</td>\n            <td>{{ host.column_name }}</td>\n            <td>{{ host.column_since }}</td>\n            <td>{{ host.column_last }}</td>\n            <td>{{ host.column_traffic }}</td>\n            <td>{{ host.column_thpt }}</td>\n          </tr>\n        <!-- </div>   -->\n      </tbody>\n    </table>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\"><strong>Traffic (General)</strong></div>\n  <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th>IP</th>\n          <th>Name</th>\n          <th>Seen Since</th>\n          <th>Last Seen</th>\n          <th>Traffic</th>\n          <th>Throughput</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let host of hosts | paginate: { itemsPerPage: pageSize, currentPage: currentPage, totalItems: total }\">\n          <td>{{ host.key }}</td>\n          <td>{{ host.column_name }}</td>\n          <td>{{ host.column_since }}</td>\n          <td>{{ host.column_last }}</td>\n          <td>{{ host.column_traffic }}</td>\n          <td>{{ host.column_thpt }}</td>\n        </tr>\n      </tbody>\n    </table>\n    <div style=\"align-content: center;\">\n        <pagination-controls\n        id=\"host_paination\"\n        (pageChange)=\"currentPage = $event\"\n        previousLabel=\"Previous\"\n        nextLabel=\"Next\"></pagination-controls>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -2651,15 +2649,20 @@ var TrafficGeneralComponent = (function () {
                     hostEntry.column_thpt = hostEntry.column_thpt.substring(0, hostEntry.column_thpt.indexOf('<') - 1);
                 });
                 _this.hosts = hostsDirty;
-                console.log("country the response in frontend >>>>>" + JSON.stringify(hostsDirty));
             }
             else {
                 _this.hosts = [];
             }
+            _this.currentPage = 1;
+            _this.pageSize = 8;
+            _this.total = _this.hosts.length;
         });
         setTimeout(function () {
             _this.getTrafficGeneral();
         }, this.timeOut);
+    };
+    TrafficGeneralComponent.prototype.pageChanged = function (event) {
+        console.log(event);
     };
     TrafficGeneralComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2684,7 +2687,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".fromHeader {\n    background-color: bisque;\n}\n\n.toHeader {\n    background-color: burlywood;\n}\n\ntd {\n    height: 30%;\n}\n\nth {\n    height: 30%;\n}\n\n", ""]);
+exports.push([module.i, ".fromHeader {\n    background-color: bisque;\n}\n\n.toHeader {\n    background-color: burlywood;\n}\n\ntd {\n    height: 20%;\n}\n\nth {\n    height: 20%;\n}\n\n", ""]);
 
 // exports
 
@@ -2697,7 +2700,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/traffic/traffic.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\">\n    <strong>Traffic By Country</strong>\n    <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th class=\"fromHeader\">Country</th>\n          <th class=\"fromHeader\"># Hosts</th>\n          <th class=\"fromHeader\">Active Since</th>\n          <th class=\"fromHeader\">Throughput</th>\n          <th class=\"fromHeader\">Volume</th>\n        </tr>\n      </thead>\n      <tbody>\n        <div *ngIf=\"countrie\">\n          <tr *ngFor=\"let country of countries\">\n            <td>{{ country.key }}</td>\n            <td>{{ country.column_hosts }}</td>\n            <td>{{ country.column_since }}</td>\n            <td>{{ country.thpt }}</td>\n            <td>{{ country.column_traffic }}</td>\n          </tr>\n        </div>\n      </tbody>\n    </table>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div style=\"text-align: center;\">\n    <strong>Traffic By Country</strong>\n    <table class=\"table table-striped\">\n      <thead>\n        <tr>\n          <th class=\"fromHeader\">Country</th>\n          <th class=\"fromHeader\"># Hosts</th>\n          <th class=\"fromHeader\">Active Since</th>\n          <th class=\"fromHeader\">Throughput</th>\n          <th class=\"fromHeader\">Volume</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let country of countries | paginate: { itemsPerPage: pageSize, currentPage: currentPage, totalItems: total }\">\n          <td>{{ country.key }}</td>\n          <td>{{ country.column_hosts }}</td>\n          <td>{{ country.column_since }}</td>\n          <td>{{ country.thpt }}</td>\n          <td>{{ country.column_traffic }}</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n  <div style=\"align-content: center;\">\n      <pagination-controls\n      id=\"country_paination\"\n      (pageChange)=\"currentPage = $event\"\n      previousLabel=\"Previous\"\n      nextLabel=\"Next\"></pagination-controls>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2737,10 +2740,16 @@ var TrafficComponent = (function () {
                 _this.countries = JSON.parse(res.text()).data;
             else
                 _this.countries = [];
+            _this.currentPage = 1;
+            _this.pageSize = 8;
+            _this.total = _this.countries.length;
         });
         setTimeout(function () {
             _this.getTrafficByCountry();
         }, this.timeOut);
+    };
+    TrafficComponent.prototype.pageChanged = function (event) {
+        console.log(event);
     };
     TrafficComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({

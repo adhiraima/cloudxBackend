@@ -12,16 +12,21 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <div *ngIf="hosts"> -->
-          <tr *ngFor="let host of hosts">
-            <td>{{ host.key }}</td>
-            <td>{{ host.column_name }}</td>
-            <td>{{ host.column_since }}</td>
-            <td>{{ host.column_last }}</td>
-            <td>{{ host.column_traffic }}</td>
-            <td>{{ host.column_thpt }}</td>
-          </tr>
-        <!-- </div>   -->
+        <tr *ngFor="let host of hosts | paginate: { itemsPerPage: pageSize, currentPage: currentPage, totalItems: total }">
+          <td>{{ host.key }}</td>
+          <td>{{ host.column_name }}</td>
+          <td>{{ host.column_since }}</td>
+          <td>{{ host.column_last }}</td>
+          <td>{{ host.column_traffic }}</td>
+          <td>{{ host.column_thpt }}</td>
+        </tr>
       </tbody>
     </table>
+    <div style="align-content: center;">
+        <pagination-controls
+        id="host_paination"
+        (pageChange)="currentPage = $event"
+        previousLabel="Previous"
+        nextLabel="Next"></pagination-controls>
+    </div>
 </div>

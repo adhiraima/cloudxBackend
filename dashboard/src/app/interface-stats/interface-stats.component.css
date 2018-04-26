@@ -1,6 +1,6 @@
 app-interface-stats {
-    font-size: 0.8em;
-    width: 600px;
+    font-size: 0.5em;
+    width: 480px;
 }
 
 th {
@@ -8,6 +8,6 @@ th {
 }
 
 chart {
-    height: 105px;
-    width: 600px;
+    height: 85px;
+    width: 480px;
 }
