@@ -14,6 +14,7 @@ export class TrafficService {
   }
 
   public getTrafficGeneral(): Observable<any> {
+    console.log(window.location.origin + '/traffic-general');
     return this.http.get(window.location.origin + '/traffic-general');
   }
 }

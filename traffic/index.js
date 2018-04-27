@@ -24,10 +24,12 @@ var traffic = {
                 results = results + chunk;
             });
             response.on('end', function() {
+                console.log('called in end for country >>>>> ' + results);
                 callback(results);
             });
         });
         request.on('error', function(e) {
+            console.log('error general >>>> ' + e);
             callback(results);
         });
         request.end();
@@ -41,11 +43,12 @@ var traffic = {
                 results = results + chunk;
             });
             response.on('end', function() {
+                console.log('called in end for general >>>>> ' + results);
                 callback(results);
             });
         });
         request.on('error', function(e) {
-            console.log("error" + e);
+            console.log("error genreal <<<<<<" + e);
             callback(results);
         });
         request.end();
